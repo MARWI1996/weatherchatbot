@@ -1,5 +1,6 @@
 # weatherchatbot
-Project: AI Use Case assignment
+## Project: AI Use Case assignment
+
 In this project a chatbot for weather forecast is implemented. 
 
 - **Use case**: The (fictitious) use case is identified as follows: In the touristic country Austria, a well-known weather channel decided to implement a web-integrated English chatbot, which is able to provide current weather information, frecast for today and tomorrow for the eight capitals of the states of Austria: Bregenz, Innsbruck, Salzburg, Klagenfurt, St.Polten, Graz, Linz, Vienna and Eisenstadt. This project (use case) is limited to the capitals only, ¨
@@ -9,3 +10,5 @@ since the weather channel wants to evaluate the functionality of the chatbot fir
 - **Framework**: For the framework, it has been decided to use RASA. The main reasons for choosing RASA are as follows: It is an open-source Python (prior experience by the author) implementation for bot creation, provides good documentation, has a broad community for helping with bug-fixes/problems and is also used by big enterprises, therefore represents state of the art technology for chatbot implementations. Last but not least, it also provides useful tools for web integration. Other frameworks used: Anaconda Distribution (python package and environment management), PyCharm (IDE for programming) and Github (version control).
 
 **Conversation flowchart of the weather forecast chatbot:**
+
+![Conversation flowchart weather chatbot](Flowchart.svg)
