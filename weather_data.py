@@ -1,5 +1,5 @@
 '''
-
+Python code for returning weather data depending on the requested city
 '''
 
 
