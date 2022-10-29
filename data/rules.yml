@@ -1,13 +1,17 @@
 version: "2.0"
 
+# only rules included are the ones pointing to greeting and goodbye. Both reset all slots.
+
 rules:
 
-- rule: Say goodbye anytime the user says goodbye
+- rule: greet_rule
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: action_restart
+
+- rule: bye_rule
   steps:
   - intent: goodbye
   - action: utter_goodbye
-
-- rule: Say 'I am a bot' anytime the user challenges
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - action: action_restart

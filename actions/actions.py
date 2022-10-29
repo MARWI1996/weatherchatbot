@@ -1,6 +1,7 @@
-'''
+"""
 Custom actions implemented in Python used for the weather forecast chatbot
-'''
+The slots and responses are exchanged with RASA here
+"""
 
 
 # Libraries import
@@ -34,7 +35,8 @@ class Weather(Action):
             drow = 1
 
         # list possible cities
-        possible_cities = ["Auckland", "Wellington", "Christchurch", "Innsbruck"]
+        possible_cities = ["Bregenz", "Innsbruck", "Salzburg", "Linz", "Graz", "Klagenfurt", "St. Pölten", "Eisenstadt",
+                           "Vienna"]
 
         # Default answer if better answer cannot be found
         response = "Sorry, got no idea - but I hope it's going to be sunny and warm. "
