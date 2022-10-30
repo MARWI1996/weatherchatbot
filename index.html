@@ -1,0 +1,36 @@
+<!-- HTML code for implementing the web integration of the weather chatbot.  
+This code is responsible for creating the chat client on a local host.
+used reference: https://github.com/Horizon733/rasa-webchat 
+-->
+
+<html>
+    <body>
+    <style>
+        .rw-conversation-container .rw-header{background-color: #1e7222;}
+        .rw-conversation-container .rw-messages-container .rw-message .rw-response{background-color: #e0b4ee;}
+    </style>
+        <script>!(function () {
+            let e = document.createElement("script"),
+                t = document.head || document.getElementsByTagName("head")[0];
+            (e.src =
+                "https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.js"),
+                (e.async = !0),
+                (e.onload = () => {
+                    window.WebChat.default(
+                        {
+                            initPayload: '/greet',
+                            customData: { language: "en" },
+                            socketUrl: "http://localhost:5005",
+                            title: 'Weather Chatbot AI Use Case',
+                            subtitle: 'Austrian weather channel'
+                        },
+                        null
+                    );
+                }),
+                t.insertBefore(e, t.firstChild);
+            })();
+            localStorage.clear();
+        </script>
+    </body>
+</html>
+
