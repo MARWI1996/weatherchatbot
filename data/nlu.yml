@@ -1,6 +1,7 @@
 version: "2.0"
 
 nlu:
+#user intent to greet the chatbot
 - intent: greet
   examples: |
     - hey
@@ -13,6 +14,7 @@ nlu:
     - howdy
     - Hi
 
+# user intent to say goodbye
 - intent: goodbye
   examples: |
     - bye
@@ -27,7 +29,7 @@ nlu:
     - exit
     - quit
 
-# example questions when location is given by the user
+# user questions with city provided
 - intent: weather_in_city
   examples: |
     - what is the [weather](wx_type) [tomorrow](forecast_period) in [Innsbruck](city)?
@@ -83,7 +85,7 @@ nlu:
     - how about [Innsbruck](city)
     - [humidity] (wx_type) in [Vienna](city)
 
-# example questions of when location is not given
+# user questions without city provided
 - intent: weather_without_city
   examples: |
     - what is the [weather](wx_type) [today](forecast_period)?
@@ -101,7 +103,7 @@ nlu:
     - how is the weather [tomorrow](forecast_period)?
     - what is the weather  [current](forecast_period)?
     - is it going to [rain](wx_type)?
-    - is going to be [sunny](wx_type?
+    - is going to be [sunny](wx_type)?
     - what are the [conditions](wx_type) [tomorrow](forecast_period)?
     - [weather](wx_type)
     - [rain](wx_type)
@@ -120,7 +122,7 @@ nlu:
     - howabout later [today](forecast_period)
     - later [today](forecast_period)
 
-# tricky questions....
+# asking what you are
 - intent: who_are_you
   examples: |
     - who are you
@@ -129,7 +131,7 @@ nlu:
     - are you human
     - what are you
 
-# chitchat....
+# small talk - how are you
 - intent: how_are_you
   examples: |
     - how are you
@@ -140,7 +142,7 @@ nlu:
     - how is it going
     - hows it going
 
-# questions about what can I do
+# questions about the chatbot capabilities
 - intent: capabilities
   examples: |
     - what can you do
@@ -155,12 +157,42 @@ nlu:
     - help
     - can you help me
 
-# synonym defnitions to limit variations and to help NLU
+# expressing a sad mood
+- intent: mood_sad
+  examples: |
+    - I am feeling sad
+    - not great
+    - I am feeling bad
+    - horrible
+    - bad
+    - under the weather
+    - sad
+    - okay
+    - fine
+    - sick
+    - tired
+
+# expressing a great mood
+- intent: mood_great
+  examples: |
+    - I am feeling good
+    - I am good
+    - I am happy
+    - Amazing
+    - amazing
+    - Good
+    - good
+    - excellent
+    - pretty good
+
+
+# synonym definitions to help the NLU
 - synonym: current
   examples: |
     - currently
     - now
     - current
+    - right now
 
 - synonym: today
   examples: |
@@ -168,17 +200,19 @@ nlu:
     - today
     - later today
     - going to
-
+    - in the evening
 
 - synonym: tomorrow
   examples: |
     - tomorrow
+    - tomorow
 
 - synonym: uvi
   examples: |
     - uvi
     - UV
     - UV index
+    - uv
 
 - synonym: cloud_conditions
   examples: |
@@ -251,6 +285,11 @@ nlu:
     - St pölten
     - Sankt Pölten
     - sankt pölten
+    - St Poelten
+    - Pölten
+    - Poelten
+    - poelten
+    - pölten
 
 - synonym: Innsbruck
   examples: |

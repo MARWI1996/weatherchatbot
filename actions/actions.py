@@ -39,7 +39,7 @@ class Weather(Action):
                            "Vienna"]
 
         # Default answer if better answer cannot be found
-        response = "Sorry, got no idea - but I hope it's going to be sunny and warm. "
+        response = "Sorry, I couldn´t find that information - but hopefully it's going to be sunny and warm. "
 
         # read & parse the information and generate response
         if city in possible_cities:
@@ -76,7 +76,7 @@ class Weather(Action):
             if forecast_period == 'current':
                 # generic query
                 if wx_type == 'weather':
-                    response = "The current temperature in {} is {}C. It is {} and the wind speed is {}m/s".format(city,
+                    response = "The current temperature in {} is {}°C. It is {} and the wind speed is {}m/s".format(city,
                                                                                                                    temp,
                                                                                                                    cond,
                                                                                                                    wind)
@@ -86,7 +86,7 @@ class Weather(Action):
                                                                                                                wind,
                                                                                                                wind_deg)
                 if wx_type == 'temperature':
-                    response = "The current temperature in {} is {}degrees Celsius. ".format(city, temp)
+                    response = "The current temperature in {} is {}°C. ".format(city, temp)
                 if wx_type == 'pressure':
                     response = "The current air pressure in {} is {} millibars. ".format(city, pressure)
                 if wx_type == 'humid':
@@ -100,14 +100,14 @@ class Weather(Action):
             if forecast_period == 'today' or forecast_period == 'tomorrow':
                 # generic forecast
                 if wx_type == 'weather':
-                    response = "The forecast high for {} {} is {}C. It is expected to be {} and the wind speed is {}m/s".format(
+                    response = "The forecast high for {} {} is {}°C. It is expected to be {} and the wind speed is {}m/s".format(
                         city, forecast_period, temp_max_predict, cond_predict, wind_speed_predict)
                 # more specific forecasts
                 if wx_type == 'wind':
                     response = "The forecasted wind speed for {} {} is {} metres per second from {} degrees. ".format(
                         city, forecast_period, wind_speed_predict, wind_deg_predict)
                 if wx_type == 'temperature':
-                    response = "The forecasted maximum temperature for {} {} is {}C while the minimum is {}C. ".format(
+                    response = "The forecasted maximum temperature for {} {} is {}C while the minimum is {}°C. ".format(
                         city, forecast_period, temp_max_predict, temp_min_predict)
                 if wx_type == 'pressure':
                     response = "The forecasted air pressure for {} {} is {} millibars. ".format(city, forecast_period,

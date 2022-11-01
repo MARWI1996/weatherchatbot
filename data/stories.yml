@@ -1,37 +1,56 @@
 version: "2.0"
 
-# four simple stories, one with location information given, and one without it in which case it is requested separately.
+# stories represent the conversational flows of the chatbot. Here, various conversational stories are defined.
+# The stories "weather_with_city" and "weather_without_city" represent the core of the chatbot function (asking weather)
+# The rest of the stories represent the "small talk"-capabilities of the chatbot
 
 stories:
 
-- story: wx_1
+# The two main story paths for asking the weather when the city is given or not given
+
+- story: weather_with_city
   steps:
   - intent: weather_in_city
   - action: action_wx
 
-- story: wx_2
+- story: weather_without_city
   steps:
   - intent: weather_without_city
   - action: city_form
   - action: action_wx
 
-# just in case some one asks - who are you...
 
+
+# "Small talk"-capabilities
+
+# Who are you?
 - story: who_are_you
   steps:
   - intent: who_are_you
   - action: utter_im_rasa
 
 
-# and what can I do
+# What are the capabilities?
 - story: capabilities
   steps:
   - intent: capabilities
   - action: utter_capabilities
 
-# should the user be friendly...
-- story: how_are_you
+# How are you? - feeling sad
+- story: how_are_you_bad
   steps:
   - intent: how_are_you
   - action: utter_im_well
+  - intent: mood_sad
+  - action: utter_cheer_up
+
+# How are you? - feeling good
+- story: how_are_you_good
+  steps:
+  - intent: how_are_you
+  - action: utter_im_well
+  - intent: mood_great
+  - action: utter_happy_response
+
+
 
