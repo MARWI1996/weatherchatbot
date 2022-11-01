@@ -1,92 +1,326 @@
 version: "2.0"
 
 nlu:
+#user intent to greet the chatbot
 - intent: greet
   examples: |
     - hey
     - hello
     - hi
     - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - Hallo
+    - hi there
+    - greetings
+    - howdy
+    - Hi
 
+# user intent to say goodbye
 - intent: goodbye
   examples: |
-    - good afternoon
-    - cu
-    - good by
-    - cee you later
-    - good night
     - bye
     - goodbye
     - have a nice day
     - see you around
     - bye bye
     - see you later
+    - thanks
+    - thank you
+    - cheers
+    - exit
+    - quit
 
-- intent: affirm
+# user questions with city provided
+- intent: weather_in_city
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - what is the [weather](wx_type) [tomorrow](forecast_period) in [Innsbruck](city)?
+    - how's the [weather](wx_type) [now](forecast_period) in [Vienna](city)?
+    - Tell me the [weather](wx_type) [today](forecast_period) in [Eisenstadt](city)
+    - [weather](wx_type) in [Linz](city) [tomorrow](forecast_period)
+    - is it [windy](wx_type) in [Klagenfurt](city) [today](forecast_period)
+    - [raining](wx_type) [tomorrow](forecast_period) in [Bregenz](city)
+    - is it [cloudy](wx_type) in [St. Pölten](city) [tomorrow](forecast_period)
+    - [today](forecast_period) [rain](wx_type) in [Graz](city)
+    - [raining](wx_type) in [Salzburg](city) [tomorrow](forecast_period)
+    - [temperature](wx_type) [current](forecast_period) in [Eisenstadt](city)
+    - what is the [temperature](wx_type) in [Innsbruck](city) [today](forecast_period)
+    - is it going to be [temperature](wx_type) in [Bregenz](city) [today](forecast_period)
+    - [wind](wx_type) in [Vienna](city) [today](forecast_period)
+    - is it going to [rain](wx_type) in [St. Pölten](city) [tomorrow](forecast_period)
+    - [humid](wx_type) [today](forecast_period) in [Graz](city)
+    - is it [windy](wx_type) [today](forecast_period) in [Klagenfurt](city)
+    - is it going to [rain](wx_type) in [Eisenstadt](city) [tomorrow](forecast_period)
+    - is it going to be [cloudy](wx_type) in [Linz](city) [tomorrow](forecast_period)
+    - air [pressure](wx_type) in [Salzburg](city) [current](forecast_period)
+    - [pressure](wx_type) in [Klagenfurt](city) [today](forecast_period)
+    - what is the [pressure](wx_type) in [Vienna](city) [tomorrow](forecast_period)
+    - [humidity](wx_type) in [Innsbruck](city) [tomorrow](forecast_period)
+    - [uvi](wx_type) in [Linz](city) [today](forecast_period)
+    - what is the [humidity](wx_type) in [Bregenz](city) [tomorrow](forecast_period)
+    - [rain](wx_type) [St. Pölten](city) [tomorrow](forecast_period)
+    - [Eisenstadt](city) [current](forecast_period)
+    - [Graz](city) [tomorrow](forecast_period)
+    - [Vienna](city)
+    - [Klagenfurt](city)
+    - what is the [weather](wx_type) in [Innsbruck](city)?
+    - how's the [UV index](wx_type) in [Salzburg](city)?
+    - Tell me the [weather](wx_type) in [Linz](city)
+    - [weather](wx_type) in [Bregenz](city)
+    - [weather](wx_type) in [St. Pölten](city)
+    - is it [windy](wx_type) in [Innsbruck](city)
+    - [raining](wx_type) in [Vienna](city)
+    - is it [cloudy](wx_type) in [Eisenstadt](city)
+    - [rain](wx_type) in [Graz](city)
+    - [raining](wx_type) in [Salzburg](city)
+    - [temperature](wx_type) in [Bregenz](city)
+    - what is the [temperature](wx_type) in [Innbruck](city)
+    - is it going to be [cloudy](wx_type) in [Klagenfurt](city)
+    - is it going to [UV index](wx_type) in [Linz](city)
+    - what is the [weather](wx_type) for [Graz](city)
+    - what is the [pressure](wx_type) in [St. Pölten](city)
+    - air [pressure](wx_type) in [Vienna](city)
+    - what is the [humidity](wx_type) in [Eisenstadt](city)
+    - air [humidity](wx_type) in [Graz](city)
+    - [uvi](wx_type) [Linz](city)
+    - [weather](wx_type) [Klagenfurt](city)
+    - how about [Innsbruck](city)
+    - [humidity] (wx_type) in [Vienna](city)
 
-- intent: deny
+# user questions without city provided
+- intent: weather_without_city
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - what is the [weather](wx_type) [today](forecast_period)?
+    - how's the [weather](wx_type) [tomorrow](forecast_period)?
+    - Tell me the [weather](wx_type) [today](forecast_period)
+    - [weather](wx_type) [tomorrow](forecast_period)
+    - is it [windy](wx_type) [current](forecast_period)
+    - [raining](wx_type) [today](forecast_period)
+    - is it [cloudy](wx_type) [tomorrow](forecast_period)
+    - [rain](wx_type) [today](forecast_period)
+    - [temperature](wx_type) [tomorrow](forecast_period)
+    - what is the [temperature](wx_type) [tomorrow](forecast_period)
+    - what is the [pressure](wx_type) [tomorrow](forecast_period)
+    - air [pressure](wx_type) [tomorrow](forecast_period)
+    - how is the weather [tomorrow](forecast_period)?
+    - what is the weather  [current](forecast_period)?
+    - is it going to [rain](wx_type)?
+    - is going to be [sunny](wx_type)?
+    - what are the [conditions](wx_type) [tomorrow](forecast_period)?
+    - [weather](wx_type)
+    - [rain](wx_type)
+    - [wind](wx_type)
+    - [pressure](wx_type)
+    - [humidity](wx_type)
+    - how about [wind](wx_type)
+    - [sunny](wx_type)
+    - [rainy](wx_type)
+    - [snow](wx_type)
+    - [sun](wx_type)
+    - [pissing](wx_type)
+    - [shining](wx_type)
+    - how about [tomorrow](forecast_period)
+    - and [tomorrow](forecast_period)
+    - howabout later [today](forecast_period)
+    - later [today](forecast_period)
 
+# asking what you are
+- intent: who_are_you
+  examples: |
+    - who are you
+    - are you a bot
+    - what is your name
+    - are you human
+    - what are you
+
+# small talk - how are you
+- intent: how_are_you
+  examples: |
+    - how are you
+    - are you ok
+    - nice to meet, how are you
+    - howdy
+    - hows it hanging
+    - how is it going
+    - hows it going
+
+# questions about the chatbot capabilities
+- intent: capabilities
+  examples: |
+    - what can you do
+    - what are your capabilities
+    - what are you good at
+    - what are you good for
+    - any instructions
+    - instructions
+    - how do i use this
+    - info
+    - information
+    - help
+    - can you help me
+
+# expressing a sad mood
+- intent: mood_sad
+  examples: |
+    - I am feeling sad
+    - not great
+    - I am feeling bad
+    - horrible
+    - bad
+    - under the weather
+    - sad
+    - okay
+    - fine
+    - sick
+    - tired
+
+# expressing a great mood
 - intent: mood_great
   examples: |
-    - perfect
-    - great
+    - I am feeling good
+    - I am good
+    - I am happy
+    - Amazing
     - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - Good
+    - good
+    - excellent
+    - pretty good
 
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
 
-- intent: bot_challenge
+# synonym definitions to help the NLU
+- synonym: current
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - currently
+    - now
+    - current
+    - right now
+
+- synonym: today
+  examples: |
+    - later
+    - today
+    - later today
+    - going to
+    - in the evening
+
+- synonym: tomorrow
+  examples: |
+    - tomorrow
+    - tomorow
+
+- synonym: uvi
+  examples: |
+    - uvi
+    - UV
+    - UV index
+    - uv
+
+- synonym: cloud_conditions
+  examples: |
+    - raining
+    - wet
+    - rain
+    - conditions
+    - condition
+    - clouds
+    - snow
+    - snowing
+    - sunny
+    - pissing
+    - hosing
+    - pooring
+    - cloudy
+    - rainy
+    - shining
+    - sun
+    - rainfall
+    - snowfall
+
+- synonym: temperature
+  examples: |
+    - hot
+    - cold
+    - chilly
+    - heat
+    - temp
+    - temperature
+
+- synonym: wind
+  examples: |
+    - windy
+    - breeze
+    - breezy
+    - gust
+    - gusty
+    - gale
+    - wind
+
+- synonym: weather
+  examples: |
+    - weather
+    - wx
+    - forecast
+
+- synonym: humid
+  examples: |
+    - humidity
+    - humid
+
+- synonym: Vienna
+  examples: |
+    - Vienna
+    - vienna
+    - Viena
+    - viena
+
+- synonym: Graz
+  examples: |
+    - Graz
+    - graz
+
+- synonym: St. Pölten
+  examples: |
+    - St. Pölten
+    - st. pölten
+    - st pölten
+    - St pölten
+    - Sankt Pölten
+    - sankt pölten
+    - St Poelten
+    - Pölten
+    - Poelten
+    - poelten
+    - pölten
+
+- synonym: Innsbruck
+  examples: |
+    - Innsbruck
+    - innsbruck
+    - Insbruck
+    - insbruck
+
+- synonym: Eisenstadt
+  examples: |
+    - Eisenstadt
+    - eisenstadt
+    - Eisenstat
+    - eisenstat
+
+- synonym: Klagenfurt
+  examples: |
+    - Klagenfurt
+    - klagenfurt
+
+- synonym: Bregenz
+  examples: |
+    - Bregenz
+    - bregenz
+
+- synonym: Linz
+  examples: |
+    - Linz
+    - linz
+
+- synonym: Salzburg
+  examples: |
+    - Salzburg
+    - salzburg

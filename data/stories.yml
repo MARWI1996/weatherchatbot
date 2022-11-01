@@ -1,30 +1,56 @@
 version: "2.0"
 
+# stories represent the conversational flows of the chatbot. Here, various conversational stories are defined.
+# The stories "weather_with_city" and "weather_without_city" represent the core of the chatbot function (asking weather)
+# The rest of the stories represent the "small talk"-capabilities of the chatbot
+
 stories:
 
-- story: happy path
+# The two main story paths for asking the weather when the city is given or not given
+
+- story: weather_with_city
   steps:
-  - intent: greet
-  - action: utter_greet
+  - intent: weather_in_city
+  - action: action_wx
+
+- story: weather_without_city
+  steps:
+  - intent: weather_without_city
+  - action: city_form
+  - action: action_wx
+
+
+
+# "Small talk"-capabilities
+
+# Who are you?
+- story: who_are_you
+  steps:
+  - intent: who_are_you
+  - action: utter_im_rasa
+
+
+# What are the capabilities?
+- story: capabilities
+  steps:
+  - intent: capabilities
+  - action: utter_capabilities
+
+# How are you? - feeling sad
+- story: how_are_you_bad
+  steps:
+  - intent: how_are_you
+  - action: utter_im_well
+  - intent: mood_sad
+  - action: utter_cheer_up
+
+# How are you? - feeling good
+- story: how_are_you_good
+  steps:
+  - intent: how_are_you
+  - action: utter_im_well
   - intent: mood_great
-  - action: utter_happy
+  - action: utter_happy_response
 
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
 
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+
