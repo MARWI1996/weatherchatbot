@@ -14,13 +14,16 @@ intents:
 - how_are_you
 - mood_great
 - mood_sad
+- food
+- animal
+- job_quality
 
 # slots for carrying information between intents and actions
 # and also to and from external python actions (actions.py)
 entities:
 - city # Austrian capitals
 - forecast_period # current, today or tomorrow
-- wx_type # e.g. rain, air pressure, sun, temperature, wind, humidity....
+- weather_type # e.g. rain, air pressure, sun, temperature, wind, humidity....
 
 # definition of the slots
 slots:
@@ -37,7 +40,7 @@ slots:
   requested_slot:
     type: text
     influence_conversation: false
-  wx_type:
+  weather_type:
     type: categorical
     influence_conversation: true
     values:
@@ -86,13 +89,28 @@ responses:
       - title: "sad"
         payload: /mood_sad
   - text: Excellent. What about you?
+  utter_favourite_food:
+    - text: If I had the possibility to eat like humans, it would probably be pizza :D
+    - text: definitely Pizza  (I wish I could eat it though)
+  utter_favourite_animal:
+    - text: I really like dogs
+  utter_liking_job:
+    - text: I really like helping people, so definitely yes.
 
 # all actions
 actions:
-- action_wx # external actions (actions.py)
+- action_weather # external actions (actions.py)
 - utter_ask_city
 - utter_goodbye
 - utter_greet
+- utter_im_rasa
+- utter_capabilities
+- utter_cheer_up
+- utter_happy_response
+- utter_im_well
+- utter_favourite_food
+- utter_favourite_animal
+- utter_liking_job
 
 # Asking for the city, if user does not provide this information
 forms:

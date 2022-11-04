@@ -32,91 +32,91 @@ nlu:
 # user questions with city provided
 - intent: weather_in_city
   examples: |
-    - what is the [weather](wx_type) [tomorrow](forecast_period) in [Innsbruck](city)?
-    - how's the [weather](wx_type) [now](forecast_period) in [Vienna](city)?
-    - Tell me the [weather](wx_type) [today](forecast_period) in [Eisenstadt](city)
-    - [weather](wx_type) in [Linz](city) [tomorrow](forecast_period)
-    - is it [windy](wx_type) in [Klagenfurt](city) [today](forecast_period)
-    - [raining](wx_type) [tomorrow](forecast_period) in [Bregenz](city)
-    - is it [cloudy](wx_type) in [St. Pölten](city) [tomorrow](forecast_period)
-    - [today](forecast_period) [rain](wx_type) in [Graz](city)
-    - [raining](wx_type) in [Salzburg](city) [tomorrow](forecast_period)
-    - [temperature](wx_type) [current](forecast_period) in [Eisenstadt](city)
-    - what is the [temperature](wx_type) in [Innsbruck](city) [today](forecast_period)
-    - is it going to be [temperature](wx_type) in [Bregenz](city) [today](forecast_period)
-    - [wind](wx_type) in [Vienna](city) [today](forecast_period)
-    - is it going to [rain](wx_type) in [St. Pölten](city) [tomorrow](forecast_period)
-    - [humid](wx_type) [today](forecast_period) in [Graz](city)
-    - is it [windy](wx_type) [today](forecast_period) in [Klagenfurt](city)
-    - is it going to [rain](wx_type) in [Eisenstadt](city) [tomorrow](forecast_period)
-    - is it going to be [cloudy](wx_type) in [Linz](city) [tomorrow](forecast_period)
-    - air [pressure](wx_type) in [Salzburg](city) [current](forecast_period)
-    - [pressure](wx_type) in [Klagenfurt](city) [today](forecast_period)
-    - what is the [pressure](wx_type) in [Vienna](city) [tomorrow](forecast_period)
-    - [humidity](wx_type) in [Innsbruck](city) [tomorrow](forecast_period)
-    - [uvi](wx_type) in [Linz](city) [today](forecast_period)
-    - what is the [humidity](wx_type) in [Bregenz](city) [tomorrow](forecast_period)
-    - [rain](wx_type) [St. Pölten](city) [tomorrow](forecast_period)
+    - what is the [weather](weather_type) [tomorrow](forecast_period) in [Innsbruck](city)?
+    - how's the [weather](weather_type) [now](forecast_period) in [Vienna](city)?
+    - Tell me the [weather](weather_type) [today](forecast_period) in [Eisenstadt](city)
+    - [weather](weather_type) in [Linz](city) [tomorrow](forecast_period)
+    - is it [windy](weather_type) in [Klagenfurt](city) [today](forecast_period)
+    - [raining](weather_type) [tomorrow](forecast_period) in [Bregenz](city)
+    - is it [cloudy](weather_type) in [St. Pölten](city) [tomorrow](forecast_period)
+    - [today](forecast_period) [rain](weather_type) in [Graz](city)
+    - [raining](weather_type) in [Salzburg](city) [tomorrow](forecast_period)
+    - [temperature](weather_type) [current](forecast_period) in [Eisenstadt](city)
+    - what is the [temperature](weather_type) in [Innsbruck](city) [today](forecast_period)
+    - is it going to be [temperature](weather_type) in [Bregenz](city) [today](forecast_period)
+    - [wind](weather_type) in [Vienna](city) [today](forecast_period)
+    - is it going to [rain](weather_type) in [St. Pölten](city) [tomorrow](forecast_period)
+    - [humid](weather_type) [today](forecast_period) in [Graz](city)
+    - is it [windy](weather_type) [today](forecast_period) in [Klagenfurt](city)
+    - is it going to [rain](weather_type) in [Eisenstadt](city) [tomorrow](forecast_period)
+    - is it going to be [cloudy](weather_type) in [Linz](city) [tomorrow](forecast_period)
+    - air [pressure](weather_type) in [Salzburg](city) [current](forecast_period)
+    - [pressure](weather_type) in [Klagenfurt](city) [today](forecast_period)
+    - what is the [pressure](weather_type) in [Vienna](city) [tomorrow](forecast_period)
+    - [humidity](weather_type) in [Innsbruck](city) [tomorrow](forecast_period)
+    - [uvi](weather_type) in [Linz](city) [today](forecast_period)
+    - what is the [humidity](weather_type) in [Bregenz](city) [tomorrow](forecast_period)
+    - [rain](weather_type) [St. Pölten](city) [tomorrow](forecast_period)
     - [Eisenstadt](city) [current](forecast_period)
     - [Graz](city) [tomorrow](forecast_period)
     - [Vienna](city)
     - [Klagenfurt](city)
-    - what is the [weather](wx_type) in [Innsbruck](city)?
-    - how's the [UV index](wx_type) in [Salzburg](city)?
-    - Tell me the [weather](wx_type) in [Linz](city)
-    - [weather](wx_type) in [Bregenz](city)
-    - [weather](wx_type) in [St. Pölten](city)
-    - is it [windy](wx_type) in [Innsbruck](city)
-    - [raining](wx_type) in [Vienna](city)
-    - is it [cloudy](wx_type) in [Eisenstadt](city)
-    - [rain](wx_type) in [Graz](city)
-    - [raining](wx_type) in [Salzburg](city)
-    - [temperature](wx_type) in [Bregenz](city)
-    - what is the [temperature](wx_type) in [Innbruck](city)
-    - is it going to be [cloudy](wx_type) in [Klagenfurt](city)
-    - is it going to [UV index](wx_type) in [Linz](city)
-    - what is the [weather](wx_type) for [Graz](city)
-    - what is the [pressure](wx_type) in [St. Pölten](city)
-    - air [pressure](wx_type) in [Vienna](city)
-    - what is the [humidity](wx_type) in [Eisenstadt](city)
-    - air [humidity](wx_type) in [Graz](city)
-    - [uvi](wx_type) [Linz](city)
-    - [weather](wx_type) [Klagenfurt](city)
+    - what is the [weather](weather_type) in [Innsbruck](city)?
+    - how's the [UV index](weather_type) in [Salzburg](city)?
+    - Tell me the [weather](weather_type) in [Linz](city)
+    - [weather](weather_type) in [Bregenz](city)
+    - [weather](weather_type) in [St. Pölten](city)
+    - is it [windy](weather_type) in [Innsbruck](city)
+    - [raining](weather_type) in [Vienna](city)
+    - is it [cloudy](weather_type) in [Eisenstadt](city)
+    - [rain](weather_type) in [Graz](city)
+    - [raining](weather_type) in [Salzburg](city)
+    - [temperature](weather_type) in [Bregenz](city)
+    - what is the [temperature](weather_type) in [Innbruck](city)
+    - is it going to be [cloudy](weather_type) in [Klagenfurt](city)
+    - is it going to [UV index](weather_type) in [Linz](city)
+    - what is the [weather](weather_type) for [Graz](city)
+    - what is the [pressure](weather_type) in [St. Pölten](city)
+    - air [pressure](weather_type) in [Vienna](city)
+    - what is the [humidity](weather_type) in [Eisenstadt](city)
+    - air [humidity](weather_type) in [Graz](city)
+    - [uvi](weather_type) [Linz](city)
+    - [weather](weather_type) [Klagenfurt](city)
     - how about [Innsbruck](city)
-    - [humidity] (wx_type) in [Vienna](city)
+    - [humidity] (weather_type) in [Vienna](city)
 
 # user questions without city provided
 - intent: weather_without_city
   examples: |
-    - what is the [weather](wx_type) [today](forecast_period)?
-    - how's the [weather](wx_type) [tomorrow](forecast_period)?
-    - Tell me the [weather](wx_type) [today](forecast_period)
-    - [weather](wx_type) [tomorrow](forecast_period)
-    - is it [windy](wx_type) [current](forecast_period)
-    - [raining](wx_type) [today](forecast_period)
-    - is it [cloudy](wx_type) [tomorrow](forecast_period)
-    - [rain](wx_type) [today](forecast_period)
-    - [temperature](wx_type) [tomorrow](forecast_period)
-    - what is the [temperature](wx_type) [tomorrow](forecast_period)
-    - what is the [pressure](wx_type) [tomorrow](forecast_period)
-    - air [pressure](wx_type) [tomorrow](forecast_period)
+    - what is the [weather](weather_type) [today](forecast_period)?
+    - how's the [weather](weather_type) [tomorrow](forecast_period)?
+    - Tell me the [weather](weather_type) [today](forecast_period)
+    - [weather](weather_type) [tomorrow](forecast_period)
+    - is it [windy](weather_type) [current](forecast_period)
+    - [raining](weather_type) [today](forecast_period)
+    - is it [cloudy](weather_type) [tomorrow](forecast_period)
+    - [rain](weather_type) [today](forecast_period)
+    - [temperature](weather_type) [tomorrow](forecast_period)
+    - what is the [temperature](weather_type) [tomorrow](forecast_period)
+    - what is the [pressure](weather_type) [tomorrow](forecast_period)
+    - air [pressure](weather_type) [tomorrow](forecast_period)
     - how is the weather [tomorrow](forecast_period)?
     - what is the weather  [current](forecast_period)?
-    - is it going to [rain](wx_type)?
-    - is going to be [sunny](wx_type)?
-    - what are the [conditions](wx_type) [tomorrow](forecast_period)?
-    - [weather](wx_type)
-    - [rain](wx_type)
-    - [wind](wx_type)
-    - [pressure](wx_type)
-    - [humidity](wx_type)
-    - how about [wind](wx_type)
-    - [sunny](wx_type)
-    - [rainy](wx_type)
-    - [snow](wx_type)
-    - [sun](wx_type)
-    - [pissing](wx_type)
-    - [shining](wx_type)
+    - is it going to [rain](weather_type)?
+    - is going to be [sunny](weather_type)?
+    - what are the [conditions](weather_type) [tomorrow](forecast_period)?
+    - [weather](weather_type)
+    - [rain](weather_type)
+    - [wind](weather_type)
+    - [pressure](weather_type)
+    - [humidity](weather_type)
+    - how about [wind](weather_type)
+    - [sunny](weather_type)
+    - [rainy](weather_type)
+    - [snow](weather_type)
+    - [sun](weather_type)
+    - [pissing](weather_type)
+    - [shining](weather_type)
     - how about [tomorrow](forecast_period)
     - and [tomorrow](forecast_period)
     - howabout later [today](forecast_period)
@@ -185,8 +185,54 @@ nlu:
     - excellent
     - pretty good
 
+# questions regarding favourite food
+- intent: food
+  examples: |
+    - fav food?
+    - favourite food
+    - preferred food
+    - What is your favourite food?
+    - What do you like to eat the most?
+    - favourite dish
+    - fav dish
+    - What is your favourite dish?
+    - What is your favourite cuisine
+    - your favourite dish
+    - favourite cuisine
+    - preferred cuisine
+    - fav cuisine
 
-# synonym definitions to help the NLU
+# questions regarding favourite animal
+- intent: animal
+  examples: |
+    - fav animal
+    - favourite animal
+    - favourite pet
+    - preferred animal
+    - What is your favourite animal?
+    - Do you like animals?
+    - favourite pet
+    - fav dish
+    - What is your favourite pet?
+    - Do you have a favourite pet?
+    - your favourite animal
+    - your favourite animals
+
+# questions if you like your job
+- intent: job_quality
+  examples: |
+    - liking your job?
+    - Do you like your job?
+    - Is your job good?
+    - Do you like working this job?
+    - Do you like working here?
+    - Is it a good job?
+    - good job?
+    - is the job good?
+    - do you like working?
+
+
+# synonym definitions to support the NLU
 - synonym: current
   examples: |
     - currently
