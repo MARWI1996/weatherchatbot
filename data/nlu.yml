@@ -188,7 +188,7 @@ nlu:
 # questions regarding favourite food
 - intent: food
   examples: |
-    - fav food
+    - fav food?
     - favourite food
     - preferred food
     - What is your favourite food?
@@ -201,6 +201,35 @@ nlu:
     - favourite cuisine
     - preferred cuisine
     - fav cuisine
+
+# questions regarding favourite animal
+- intent: animal
+  examples: |
+    - fav animal
+    - favourite animal
+    - favourite pet
+    - preferred animal
+    - What is your favourite animal?
+    - Do you like animals?
+    - favourite pet
+    - fav dish
+    - What is your favourite pet?
+    - Do you have a favourite pet?
+    - your favourite animal
+    - your favourite animals
+
+# questions if you like your job
+- intent: job_quality
+  examples: |
+    - liking your job?
+    - Do you like your job?
+    - Is your job good?
+    - Do you like working this job?
+    - Do you like working here?
+    - Is it a good job?
+    - good job?
+    - is the job good?
+    - do you like working?
 
 
 # synonym definitions to support the NLU
@@ -341,11 +370,3 @@ nlu:
   examples: |
     - Salzburg
     - salzburg
-
-- synonym: food
-  examples: |
-    - Dish
-    - food
-    - Food
-    - cuisine
-    - Cuisine

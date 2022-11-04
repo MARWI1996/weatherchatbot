@@ -15,6 +15,8 @@ intents:
 - mood_great
 - mood_sad
 - food
+- animal
+- job_quality
 
 # slots for carrying information between intents and actions
 # and also to and from external python actions (actions.py)
@@ -90,6 +92,10 @@ responses:
   utter_favourite_food:
     - text: If I had the possibility to eat like humans, it would probably be pizza :D
     - text: definitely Pizza  (I wish I could eat it though)
+  utter_favourite_animal:
+    - text: I really like dogs
+  utter_liking_job:
+    - text: I really like helping people, so definitely yes.
 
 # all actions
 actions:
@@ -103,6 +109,8 @@ actions:
 - utter_happy_response
 - utter_im_well
 - utter_favourite_food
+- utter_favourite_animal
+- utter_liking_job
 
 # Asking for the city, if user does not provide this information
 forms:

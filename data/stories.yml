@@ -6,7 +6,7 @@ version: "2.0"
 
 stories:
 
-# The two main story paths for asking the weather when the city is given or not given
+# The two main story paths for asking for the weather when the city is given or not given
 
 - story: weather_city_given
   steps:
@@ -29,8 +29,7 @@ stories:
   - intent: who_are_you
   - action: utter_im_rasa
 
-
-# What are the capabilities?
+# What are your capabilities?
 - story: capabilities
   steps:
   - intent: capabilities
@@ -57,6 +56,18 @@ stories:
   steps:
   - intent: food
   - action: utter_favourite_food
+
+# What is your favourite animal?
+- story: favourite_animal
+  steps:
+  - intent: animal
+  - action: utter_favourite_animal
+
+# Do you like your job?
+- story: Do you like your job
+  steps:
+  - intent: job_quality
+  - action: utter_liking_job
 
 
 
