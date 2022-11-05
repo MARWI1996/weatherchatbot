@@ -1,4 +1,4 @@
-version: "2.0"
+version: "3.1"
 
 # stories represent the conversational flows of the chatbot. Here, various conversational stories are defined.
 # The stories "weather_with_city" and "weather_without_city" represent the core of the chatbot function (asking weather)
@@ -12,12 +12,14 @@ stories:
   steps:
   - intent: weather_in_city
   - action: action_weather
+  - action: action_restart
 
 - story: weather_city_not_given
   steps:
   - intent: weather_without_city
   - action: city_form
   - action: action_weather
+  - action: action_restart
 
 
 
@@ -68,6 +70,3 @@ stories:
   steps:
   - intent: job_quality
   - action: utter_liking_job
-
-
-
