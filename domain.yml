@@ -1,4 +1,4 @@
-version: "2.0"
+version: "3.1"
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
@@ -30,6 +30,9 @@ slots:
   city:
     type: text
     influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: city
   forecast_period:
     type: categorical
     influence_conversation: true
@@ -37,9 +40,9 @@ slots:
     - current
     - tomorrow
     - today
-  requested_slot:
-    type: text
-    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: forecast_period
   weather_type:
     type: categorical
     influence_conversation: true
@@ -53,6 +56,9 @@ slots:
     - humid
     - weather
     - __other__
+    mappings:
+      - type: from_entity
+        entity: weather_type
 
 # responses not related to weather requests
 responses:
@@ -115,8 +121,5 @@ actions:
 # Asking for the city, if user does not provide this information
 forms:
   city_form:
-    city:
-    - type: from_entity
-      entity: city
-
-
+    required_slots:
+      - city
