@@ -6,7 +6,7 @@ and Vienna can be requested.
 """
 
 
-def wx_city(city):
+def request_info_city(city):
     """
     Function for returning the weather data of the requested city
     """

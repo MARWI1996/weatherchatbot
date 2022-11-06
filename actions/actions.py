@@ -8,7 +8,7 @@ Here the weather data is retrieved and the responses for enquiring the weather a
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from weather_data import wx_city
+from weather_data import request_info_city
 
 
 class Weather(Action):
@@ -21,17 +21,17 @@ class Weather(Action):
         # Retrieve the current slots from RASA
         city = tracker.get_slot('city')
         weather_type = tracker.get_slot('weather_type')
-        forecast_period = tracker.get_slot('forecast_period')
+        forec_period = tracker.get_slot('forec_period')
 
         # Empty slots
-        if forecast_period is None:
-            forecast_period = "current"
+        if forec_period is None:
+            forec_period = "current"
         if weather_type is None:
             weather_type = "weather"
 
         # set the forecast steps for OpenWeather forecast json format
         day = 0
-        if forecast_period == "tomorrow":
+        if forec_period == "tomorrow":
             day = 1
 
         # list possible cities
@@ -39,13 +39,13 @@ class Weather(Action):
                           "Vienna"]
 
         # Default answer
-        response = "Sorry, I could not find that information - but hopefully it's going to be sunny and warm. "
+        response = "I am sorry, I could not find that information - I hope it is going to be nice weather. "
 
         # read information and generate response
         if city in allowed_cities:
 
             # get the weather information from function defined in weather_data.py
-            open_wx_msg = wx_city(city)
+            open_wx_msg = request_info_city(city)
 
             # set values to current weather
             temp = round(open_wx_msg['current']['temp'])
@@ -68,7 +68,7 @@ class Weather(Action):
             rain_predict = round(open_wx_msg['daily'][day]['rain'], 1)
 
             # answers to queries about current weather
-            if forecast_period == 'current':
+            if forec_period == 'current':
                 # general answer
                 if weather_type == 'weather':
                     response = "The current temperature in {} is {}°C. It is {} and the wind speed is {}m/s".format(
@@ -93,29 +93,29 @@ class Weather(Action):
                     response = "The current conditions in {} is {}.".format(city, cond)
 
             # answers to forecasts for today and tomorrow
-            if forecast_period == 'today' or forecast_period == 'tomorrow':
+            if forec_period == 'today' or forec_period == 'tomorrow':
                 # general answer
                 if weather_type == 'weather':
                     response = "The forecast high for {} {} is {}°C. It is expected to be {} and the wind speed is {}m/s".format(
-                        city, forecast_period, temp_max_predict, cond_predict, wind_speed_predict)
+                        city, forec_period, temp_max_predict, cond_predict, wind_speed_predict)
                 # more specific forecasts
                 if weather_type == 'wind':
                     response = "The forecasted wind speed for {} {} is {} metres per second from {} degrees. ".format(
-                        city, forecast_period, wind_speed_predict, wind_deg_predict)
+                        city, forec_period, wind_speed_predict, wind_deg_predict)
                 if weather_type == 'temperature':
                     response = "The forecasted maximum temperature for {} {} is {}C while the minimum is {}°C. ".format(
-                        city, forecast_period, temp_max_predict, temp_min_predict)
+                        city, forec_period, temp_max_predict, temp_min_predict)
                 if weather_type == 'pressure':
-                    response = "The forecasted air pressure for {} {} is {} millibars. ".format(city, forecast_period,
+                    response = "The forecasted air pressure for {} {} is {} millibars. ".format(city, forec_period,
                                                                                                 pressure_predict)
                 if weather_type == 'humid':
-                    response = "The forecasted humidity for {} {} is {}%. ".format(city, forecast_period,
+                    response = "The forecasted humidity for {} {} is {}%. ".format(city, forec_period,
                                                                                    humidity_predict)
                 if weather_type == 'uvi':
-                    response = "The forecasted UV index for {} {} is {}. ".format(city, forecast_period, uvi_predict)
+                    response = "The forecasted UV index for {} {} is {}. ".format(city, forec_period, uvi_predict)
                 if weather_type == 'cloud_conditions':
                     response = "The predicted conditions for {} {} is {} and 24hrs rain fall is expected to be {}mm".format(
-                        city, forecast_period, cond_predict, rain_predict)
+                        city, forec_period, cond_predict, rain_predict)
 
 
         # response if information about none Austrian capital is asked

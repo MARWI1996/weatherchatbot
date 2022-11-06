@@ -22,7 +22,7 @@ intents:
 # and also to and from external python actions (actions.py)
 entities:
 - city # Austrian capitals
-- forecast_period # current, today or tomorrow
+- forec_period # current, today or tomorrow
 - weather_type # e.g. rain, air pressure, sun, temperature, wind, humidity....
 
 # definition of the slots
@@ -33,7 +33,7 @@ slots:
     mappings:
       - type: from_entity
         entity: city
-  forecast_period:
+  forec_period:
     type: categorical
     influence_conversation: true
     values:
@@ -42,7 +42,7 @@ slots:
     - today
     mappings:
       - type: from_entity
-        entity: forecast_period
+        entity: forec_period
   weather_type:
     type: categorical
     influence_conversation: true

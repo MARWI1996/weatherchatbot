@@ -32,33 +32,33 @@ nlu:
 # user questions with city provided
 - intent: weather_in_city
   examples: |
-    - what is the [weather](weather_type) [tomorrow](forecast_period) in [Innsbruck](city)?
-    - how's the [weather](weather_type) [now](forecast_period) in [Vienna](city)?
-    - Tell me the [weather](weather_type) [today](forecast_period) in [Eisenstadt](city)
-    - [weather](weather_type) in [Linz](city) [tomorrow](forecast_period)
-    - is it [windy](weather_type) in [Klagenfurt](city) [today](forecast_period)
-    - [raining](weather_type) [tomorrow](forecast_period) in [Bregenz](city)
-    - is it [cloudy](weather_type) in [St. Pölten](city) [tomorrow](forecast_period)
-    - [today](forecast_period) [rain](weather_type) in [Graz](city)
-    - [raining](weather_type) in [Salzburg](city) [tomorrow](forecast_period)
-    - [temperature](weather_type) [current](forecast_period) in [Eisenstadt](city)
-    - what is the [temperature](weather_type) in [Innsbruck](city) [today](forecast_period)
-    - is it going to be [temperature](weather_type) in [Bregenz](city) [today](forecast_period)
-    - [wind](weather_type) in [Vienna](city) [today](forecast_period)
-    - is it going to [rain](weather_type) in [St. Pölten](city) [tomorrow](forecast_period)
-    - [humid](weather_type) [today](forecast_period) in [Graz](city)
-    - is it [windy](weather_type) [today](forecast_period) in [Klagenfurt](city)
-    - is it going to [rain](weather_type) in [Eisenstadt](city) [tomorrow](forecast_period)
-    - is it going to be [cloudy](weather_type) in [Linz](city) [tomorrow](forecast_period)
-    - air [pressure](weather_type) in [Salzburg](city) [current](forecast_period)
-    - [pressure](weather_type) in [Klagenfurt](city) [today](forecast_period)
-    - what is the [pressure](weather_type) in [Vienna](city) [tomorrow](forecast_period)
-    - [humidity](weather_type) in [Innsbruck](city) [tomorrow](forecast_period)
-    - [uvi](weather_type) in [Linz](city) [today](forecast_period)
-    - what is the [humidity](weather_type) in [Bregenz](city) [tomorrow](forecast_period)
-    - [rain](weather_type) [St. Pölten](city) [tomorrow](forecast_period)
-    - [Eisenstadt](city) [current](forecast_period)
-    - [Graz](city) [tomorrow](forecast_period)
+    - what is the [weather](weather_type) [tomorrow](forec_period) in [Innsbruck](city)?
+    - how's the [weather](weather_type) [now](forec_period) in [Vienna](city)?
+    - Tell me the [weather](weather_type) [today](forec_period) in [Eisenstadt](city)
+    - [weather](weather_type) in [Linz](city) [tomorrow](forec_period)
+    - is it [windy](weather_type) in [Klagenfurt](city) [today](forec_period)
+    - [raining](weather_type) [tomorrow](forec_period) in [Bregenz](city)
+    - is it [cloudy](weather_type) in [St. Pölten](city) [tomorrow](forec_period)
+    - [today](forec_period) [rain](weather_type) in [Graz](city)
+    - [raining](weather_type) in [Salzburg](city) [tomorrow](forec_period)
+    - [temperature](weather_type) [current](forec_period) in [Eisenstadt](city)
+    - what is the [temperature](weather_type) in [Innsbruck](city) [today](forec_period)
+    - is it going to be [temperature](weather_type) in [Bregenz](city) [today](forec_period)
+    - [wind](weather_type) in [Vienna](city) [today](forec_period)
+    - is it going to [rain](weather_type) in [St. Pölten](city) [tomorrow](forec_period)
+    - [humid](weather_type) [today](forec_period) in [Graz](city)
+    - is it [windy](weather_type) [today](forec_period) in [Klagenfurt](city)
+    - is it going to [rain](weather_type) in [Eisenstadt](city) [tomorrow](forec_period)
+    - is it going to be [cloudy](weather_type) in [Linz](city) [tomorrow](forec_period)
+    - air [pressure](weather_type) in [Salzburg](city) [current](forec_period)
+    - [pressure](weather_type) in [Klagenfurt](city) [today](forec_period)
+    - what is the [pressure](weather_type) in [Vienna](city) [tomorrow](forec_period)
+    - [humidity](weather_type) in [Innsbruck](city) [tomorrow](forec_period)
+    - [uvi](weather_type) in [Linz](city) [today](forec_period)
+    - what is the [humidity](weather_type) in [Bregenz](city) [tomorrow](forec_period)
+    - [rain](weather_type) [St. Pölten](city) [tomorrow](forec_period)
+    - [Eisenstadt](city) [current](forec_period)
+    - [Graz](city) [tomorrow](forec_period)
     - [Vienna](city)
     - [Klagenfurt](city)
     - what is the [weather](weather_type) in [Innsbruck](city)?
@@ -88,23 +88,23 @@ nlu:
 # user questions without city provided
 - intent: weather_without_city
   examples: |
-    - what is the [weather](weather_type) [today](forecast_period)?
-    - how's the [weather](weather_type) [tomorrow](forecast_period)?
-    - Tell me the [weather](weather_type) [today](forecast_period)
-    - [weather](weather_type) [tomorrow](forecast_period)
-    - is it [windy](weather_type) [current](forecast_period)
-    - [raining](weather_type) [today](forecast_period)
-    - is it [cloudy](weather_type) [tomorrow](forecast_period)
-    - [rain](weather_type) [today](forecast_period)
-    - [temperature](weather_type) [tomorrow](forecast_period)
-    - what is the [temperature](weather_type) [tomorrow](forecast_period)
-    - what is the [pressure](weather_type) [tomorrow](forecast_period)
-    - air [pressure](weather_type) [tomorrow](forecast_period)
-    - how is the weather [tomorrow](forecast_period)?
-    - what is the weather  [current](forecast_period)?
+    - what is the [weather](weather_type) [today](forec_period)?
+    - how's the [weather](weather_type) [tomorrow](forec_period)?
+    - Tell me the [weather](weather_type) [today](forec_period)
+    - [weather](weather_type) [tomorrow](forec_period)
+    - is it [windy](weather_type) [current](forec_period)
+    - [raining](weather_type) [today](forec_period)
+    - is it [cloudy](weather_type) [tomorrow](forec_period)
+    - [rain](weather_type) [today](forec_period)
+    - [temperature](weather_type) [tomorrow](forec_period)
+    - what is the [temperature](weather_type) [tomorrow](forec_period)
+    - what is the [pressure](weather_type) [tomorrow](forec_period)
+    - air [pressure](weather_type) [tomorrow](forec_period)
+    - how is the weather [tomorrow](forec_period)?
+    - what is the weather  [current](forec_period)?
     - is it going to [rain](weather_type)?
     - is going to be [sunny](weather_type)?
-    - what are the [conditions](weather_type) [tomorrow](forecast_period)?
+    - what are the [conditions](weather_type) [tomorrow](forec_period)?
     - [weather](weather_type)
     - [rain](weather_type)
     - [wind](weather_type)
@@ -117,10 +117,10 @@ nlu:
     - [sun](weather_type)
     - [pissing](weather_type)
     - [shining](weather_type)
-    - how about [tomorrow](forecast_period)
-    - and [tomorrow](forecast_period)
-    - howabout later [today](forecast_period)
-    - later [today](forecast_period)
+    - how about [tomorrow](forec_period)
+    - and [tomorrow](forec_period)
+    - howabout later [today](forec_period)
+    - later [today](forec_period)
 
 # asking what you are
 - intent: who_are_you
